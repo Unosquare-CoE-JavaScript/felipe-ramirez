@@ -1,0 +1,316 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+\red255\green255\blue255;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985;\cssrgb\c0\c0\c0;
+\cssrgb\c100000\c100000\c99985;\cssrgb\c100000\c100000\c99910;}
+\margl1440\margr1440\vieww29740\viewh15940\viewkind0
+\deftab720
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+
+\f0\fs36 \cf2 \cb3 \expnd0\expndtw0\kerning0
+JS Dia 1\
+2.24  \
+_________________________________________________________________________________________________________________________________________Chapter 1 What is JS:\
+Babel is used for convert from a newer JS syntax version to an equivalent older syntax\
+\
+The flow of written code is the following:\
+1. After a program leaves a developer\'92s editor, it gets transpired by Babel (then packed by web pack)\
+2. The JS engine parses the code to an AST\
+3. Then the engine converts that AST to a kind-of byte code\
+4. Finally the JS Virtual Machine executes the program :D\
+In conclusion, JS is a compiled language, multi-paradigm language (Procedural, OO, Functional)\
+\
+Chapter 2: Surveying JS\
+values: primitives and objects, \
+Primitives: number, string, boolean, undefined\
+Objects: Arrays, object\
+Function: function\
+Declaring and using variables\
+Difference between var, let, const and function\
+\
+_________________________________________________________________________________________________________________________________Chapter 2: How to organize JS\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97Classes\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97 \
+Class Inheritance: it refers to how a class can inherit behaviors of a parent class using the keyword extends and super, example:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+Class Publication \{\
+	constructor(title, author, pubDate) \{\
+		this.title = title;\
+		this.author = author;\
+		this.pubDate = pubDate;\
+	\}\
+\
+	print () \{\
+		console.log(this.title, this.author, this.pubDate)\
+	\}\
+\}\
+\
+Class Book extends Publication \{\
+	constructor (bookDetails)\{\
+		super(\
+			bookDetails.title,\
+			bookDetails.author,\
+			bookDetails.PublishedOn\
+		);\
+		this.publisher = bookDetails.publisher\
+		this.ISB = bookDetails.ISBN\
+	\}\
+	\
+	print() \{\
+		super.print();\
+		console.log(this.publisher, this.ISBN)\
+	\}\
+\}\
+\
+\
+Child classes:\
+\
+	var YDKJSY = new Book (\{\
+		title: \'93title of the book\'94,\
+		author: \'93Me\'94,\
+		publishedOn: \'93Today\'94,\
+		publisher: \'93OMG\'94,\
+		ISBN: \'9312345\'94\
+	\})\
+\
+	YDKJSY.print() // It prints all data from book, including parent class and child class, print method in this case was overridden of the inherited print()\
+	The reason that both inherited and overridden methods can have the same name (print) and co-exist is called polymorphism \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97 Modules \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 This is the way the class above is written using modules:\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 Function Publication(title, author, pubDate) \{\
+	var publicAPI = \{\
+		print() \{\
+			console.log(title, author, pubDate)\
+		\}\
+		return public API\
+	\}\
+\}\
+\
+Function Book (bookDetails) \{\
+	var pub = Publication(\
+		bookDetails.title,\
+		bookDetails.author,\
+		bookDetails.publishedOn\
+	)		\
+\
+	var publicApi = \{\
+		print() \{\
+			pub.print():\
+			console.log(bookDetails.publisher, bookDetails.ISBN\
+		\}\
+	\}\
+	\
+	return publicAPI\
+\}\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97ECMAScript Modules\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Consider the file publication.js\
+\
+Function printDetails(title, author, pubDate) \{\
+	console.log(title, author, pubDate)\
+\}\
+\
+Export function create(title, author, pubDate) \{\
+	var publicAPI = \{\
+		print() \{\
+			printDetails(title, author, pubDate)\
+		\}\
+	\}\
+	\
+	return publicAPI\
+\}\
+\
+To import and use this module, from another ES module like blogpost.js:\
+\
+Import \{ create as createPub \} from \'93publication.js\'94;\
+\
+Function printDetails(pub, URL) \{\
+	pub.print():\
+	console.log(URL)\
+		\
+\}\
+\
+Export function create(title, author, pubDate, URL) \{\
+	var pub = createPub(title, author, pubDate);\
+\
+	var publicAPI = \{\
+		print() \{\
+			printDetails(pub, URL);\
+		\}\
+	\}	\
+\
+	return publicAPI\
+\}\
+\
+And finally to use this module, we import into another ES module like main.js\
+\
+Import \{ create as newBlogPost \} from \'93blogpost.js\'94\
+\
+Var forAgainstLet = newBlogPost(\
+	\'93name\'94,\
+	\'93author\'94,\
+	\'93date\'94,\
+	\'93url\'94\
+)\
+\
+forAgainstLet.print()\
+\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 \
+________________________________________________________________________________________________________________________Chapter 3: Digging to the roots of JS\
+\
+Iteration:\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97 Clousure:\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf4 \cb5 \outl0\strokewidth0 \strokec6 A\'a0closure\'a0is the combination of a function bundled together (enclosed) with references to its surrounding state (the\'a0lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.\
+\
+\'93This\'94 keyword:\
+\
+
+\fs36 \cb5 \outl0\strokewidth0 Function classroom(teacher) \{\
+	return function study() \{\
+		console.log( teacher, this.topic)\
+	\}\
+\}\
+\
+Var assignment = classroom(\'93Felipe\'94)\
+\
+assignment(); \
+// Felipe, undefined (This.topic is undefined)\
+\
+But, if you call the function giving a context like:\
+\
+Var homework = \{\
+	topic: \'93JS\'94,\
+	assignment: assignment\
+\}\
+\
+Homework.assignment ();\
+// Felipe, JS (this is not undefined anymore, because it has a context which is homework\
+\
+Finally, another way to call a function is using the word call \
+\
+Var otherHomework = \{\
+	topic: \'93Math\'94	\
+\}\
+assignment.call(otherHomework)\
+//Felipe, Math (Now, this is solved with the new context otherHomework)\
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97 Prototypes:\
+\
+Consider defining an object as a normal literal:\
+Var homework = \{\
+		topic: \'93JS\'94\
+	\}\
+The homework object only has a single proper on it: topical but its default prototype linkage connects to the object.protype object which has common built-in methods on it like toString() and valueOf(), among others\
+\
+Object Linkage:\
+\
+example:\
+Var otherHomework = Object.create(homework)\
+otherHomework.topic; (\'93JS\'94)\
+\
+The two objects homeWork and otherHomework are linked by prototype Object, but if a property changes in one object does not mean the other will be changed\
+\
+This and Prototypes:\
+\
+Var homework = \{\
+	study() \{\
+		console.log(this.topic)\
+	\}\
+\}\
+\
+Var jsHomework = Object.create(homework)\
+jsHomework.topic = \'93Js\'94\
+jsHomework.study(); // it prints \'93Js\'94\
+\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 \cb3 ________________________________________________________________________________________________________________________Chapter 4: The bigger Picture\
+\
+Pillar 1: Scope and closure:\
+\pard\pardeftab720\partightenfactor0
+\cf2 JS is lexically scoped.\
+Closure is a natural result of lexical scope when the language has functions as first-class values, as JS does, When a function makes reference to variables from an outer scope, and that function is passed around as a value and executed in other scopes, it maintains access to its original scope variables.\
+\
+Pillar 2: Prototypes:\
+Class inheritance is similar to behavior delegation the first one uses POO and the second one uses prototypes to create objects using the same \'93features\'94 as other.\
+\
+Pillar 3: Types and coercion:\
+Types and conversion\
+\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 ________________________________________________________________________________________________________________________Appendix A: Exploring Further\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+Primitive values create a copy when you assign to another value\
+myFirstVar = \'93Hola\'94\
+mySecondvar = myFirstVar // This is a copy\
+mySecondVar = \'93Adios\'94\
+console.log(myFirstVar) // Hola\
+\
+But when you do the same with objects, a copy always make a reference between them\
+\
+objectOne = \{\
+	propertyOne: \'93hola\'94,\
+	propertyTwo: \'93hola2\'94\
+\}\
+\
+ObjectTwo = ObjectOne\
+\
+ObjectTwo.propertyTwo = \'93Adios\'94\
+\
+console.log(objectOne.propertyTwo)  // Adios :O\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+\cf2 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl480\slmult1\partightenfactor0
+
+\fs24 \cf2 \
+\
+}
