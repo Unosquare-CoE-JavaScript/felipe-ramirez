@@ -2,7 +2,7 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww29740\viewh15840\viewkind0
+\margl1440\margr1440\vieww29740\viewh15740\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\fs36 \cf0 Asynchronous JavaScript Deep Dive \
@@ -12,10 +12,8 @@ Important Concepts:\
 Asynchronous Coding\
 Event Loop\
 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 ___________________________________________ Async vs Sync:\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 Sync Advantages:\
+___________________________________________ Async vs Sync:\
+Sync Advantages:\
 Easy to write and to reason about and understand.\
 Sync Disadvantages:\
 May create blocking code\
@@ -40,8 +38,7 @@ APIS: This is where the actual functionality for built-in functions like setTime
 Callback queue first-in first-out structure\
 Event Loop: is an Algorithm that constantly checks the call stack to see if there are any function calls that ned to be run. \
 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 ___________________________________________ Callbacks:\
+___________________________________________ Callbacks:\
 \
 Is a simply function that is invoked or called after something else happens.\
 Asynchronous coding and Callbacks \
@@ -49,6 +46,35 @@ The fact that we put call back does not mean we have async, because it does not 
 \
 \
 ___________________________________________ Promises:\
+Is an Object with properties and methods\
+Represent the eventual completion or failure of an async operation\
+Provides a result value\
+\
+___________________________________________ Generators:\
+* and \'93yield\'94 keyword\
+\
+Function genTest () \{\
+	Let x = 0;\
+	console.log(\'93start\'94);\
+	x++;\
+	console.log(x);\
+	console.log(\'93end\'94);\
+\}\
+\
+Let gen = genTest();\
+\
+Function  *genTest () \{\
+	Let x = 0;\
+	console.log(\'93start\'94);\
+	yield;\
+	yield x++;\
+	console.log(x);\
+	console.log(\'93end\'94);\
+\}\
+\
+Let gen = genTest();\
+\
+Let it = arr[Symbol.iterator]() // This is a generator Func.\
 \
 \
 \
@@ -60,7 +86,8 @@ ___________________________________________ Promises:\
 \
 \
 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 \
+\
+\
+\
 \
 }

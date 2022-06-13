@@ -19,6 +19,7 @@ let processStudents = function(data, callback) {
     }
 }
 
+
 console.log("Before determineTotal");
 
 let determineTotal = function() {
