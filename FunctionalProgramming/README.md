@@ -83,4 +83,43 @@ To deal with undefined issues:
 See ExampleMonad.js
 
 
+_______________________________________________Additional Info:_________________________  
+
+Not from the course, but video Intro to Functional Programming Youtube (Channel Fazt)
+
+Functional Programming:
+
+Programming Paradigm:
+    - OPP -> Objects
+    - Imperative -> Steps
+    - Functional -> Functions
+
+Style code
+A mindset
+A trend
+Avoid changing state and Mutable data
+Data in -> data out
+
+Why FP:
+OPP JS is confusing for typical OPP devs (this, prototypes)
+Easier to debug, mantain, safer of "this"
+Community
+
+ 
+Express everything in terms of functions
+Avoid Side Effects because of the use of pure Functions
+
+Use Higher functions: a function that return functions
+ 
+Examples:
+
+var name = "Isaac"
+var greeting = "Hi, I'm"
+console.log(greeting + name )
+
+Functional:
+const greet => "Hi, I'm " + name
+greet ('Isaac')
+
+
 
