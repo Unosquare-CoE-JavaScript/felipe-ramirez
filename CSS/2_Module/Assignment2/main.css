@@ -1,0 +1,13 @@
+.box {
+    border: 5px solid red;
+    margin: 10px 5px 12px 8px;
+    padding: 5px 10px 8px 12px;
+    height: 300px;
+    width: 40%;
+    display: inline-block;
+}
+
+.box:last-child:hover,
+.box:last-child:hover {
+    background: green;
+}
