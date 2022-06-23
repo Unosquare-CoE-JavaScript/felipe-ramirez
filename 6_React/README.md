@@ -13,3 +13,7 @@ General Content:
 3. Summarized and Refreshers
     3.1 Javascript Refresher
     3.2 ReactJs Summary
+
+
+IMPORTANT:
+Link to the course repository in the next link : https://github.com/academind/react-complete-guide-code
