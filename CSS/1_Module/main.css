@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: blue;
+    font-family: sans-serif;
+}
+
+code {
+    font-family: monospace;
+    color: red;
+}
+
+.second-element code{
+    color: green
+}
+
+div > li {
+    background-color: black;
+    color: white
+}
