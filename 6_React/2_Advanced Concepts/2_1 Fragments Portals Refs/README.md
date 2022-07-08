@@ -1,12 +1,11 @@
-Fragments, Portals & Refs
+<!------------------------------------------------------------------------------------------------------------------------------>Fragments, Portals & Refs
 
-Content:
+Tags:
 - JSX Limitations and Fragments
 - Getting a cleaner DOM with portals
 - Working with Refs
-------------------------------------------------------------------------------------
 
-- JSX Limitations:
+✅ ———————————————— JSX Limitations ————————————————
 
     2 Elements next by each other will cause an error
     You Can't return more than one 'root' JSX element (You also can't store more than one 'root' JSX element in a variable)
@@ -60,8 +59,8 @@ Content:
         </>
     )
 
-<!-------------------------------------------------------------------->
- - React Portals  
+
+✅ ———————————————— React Portals   ————————————————
  This is to avoid deeply nested elements into the dom (elements like modals)
  return (
      <React.Fragment>

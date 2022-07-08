@@ -1,9 +1,14 @@
-CSS:
+ <!------------------------------------------------------------------------------------------------------------------------------> CSS:
+Tags:
+CSS into HTML
+CSS Rules
+
+
 Cascading Style Sheets:
 HTML -> The structure of the page
 CSS -> The Styling of the page
 
-<!-- ------------------------------------------------------------------------------------------ -->How to add CSS to HTML
+✅ ———————————————— How to add CSS to HTML  ————————————————
 1) Inline styling
     <body>
         <main>
@@ -27,7 +32,7 @@ CSS -> The Styling of the page
         <link rel="stylesheet" href="./cssFile.css"> /* Recommended way */
     </head>     
 
-<!-- ------------------------------------------------------------------------------------------ -->Setting up CSS rules
+✅ ———————————————— Setting up CSS rules  ————————————————
 
 - Google fonts:
 adding styles to a tag:
@@ -123,7 +128,8 @@ Allow us to be more clear and specific
     background: url(...);
     transform: scale(..);
     
-Useful Links:
+
+<Link>
 CSS Working Groups
 https://www.w3.org/TR/tr-groups-all#tr_Cascading_Style_Sheets__CSS__Working_Group
 
@@ -138,5 +144,6 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinato
 
 CSS Specificity:
 https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+</Link>
 
 

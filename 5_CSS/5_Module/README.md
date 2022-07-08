@@ -1,16 +1,14 @@
-Flexbox
-
-Content:
+Tags:
 - Flex Container
 - Main Axis vs Cross Axis
 - The flex Items
 
-Content:
+Tags:
 - CSS Grid
 - Grid concept
 - Grid vs Flexbox
 
------------------------------------------Flexbox
+<!------------------------------------------------------------------------------------------------------------------------------>Flexbox
 Property
 
 display: flex --> to create a flex container
@@ -25,7 +23,7 @@ order
 flex
 align-self
 
-- Flex-direction and flex-wrap:
+✅ ———————————————— Flex-direction and flex-wrap ————————————————
 
 .flex-container {
     display: flex;
@@ -68,14 +66,14 @@ Opposite to flex-grow
 }
 
 
-<!-- ------------------------------------------------------------------------------------------ --> CSS Grid
+<!------------------------------------------------------------------------------------------------------------------------------> CSS Grid
 
 Content:
 - CSS Grid
 - Grid concept
 - Grid vs Flexbox
 
-CSS Grid 
+✅ ————————————————CSS Grid  ————————————————
 - Mozilla has an excellent tool to manage CSS grid
 
 <div class="container">
@@ -118,7 +116,7 @@ CSS Grid
     grid-area: 1 / 2 / span 3 /span 2       /*start row value / start column value / end row value   / end column value*/
 }
 
-- Working with GAPS
+✅ ———————————————— Working with GAPS  ————————————————
 
 .container {
     grid-column-gap: 20px;
@@ -147,7 +145,7 @@ CSS Grid
     grid-column: col-start 2  / col-end 2
 }
 
-- Responsive Grids:
+✅ ———————————————— Responsive Grids  ————————————————
 
 @media (max-width: 40rem) {
     .container {
@@ -158,26 +156,25 @@ CSS Grid
     }
 }
 
-- Applying Autoflow:
+✅ ———————————————— Applying Autoflow  ————————————————
 .container {
     grid-auto-rows: 30rem /*This will be the default height for every row*/
 }
 
-- auto-fill & auto-fit
+✅ ————————————————auto-fill & auto-fit ————————————————
 .container {
     grid-template-columns: repeat(auto-fill, 10rem)       /*Create columns automatically*/
     grid-template-columns: repeat(auto-fit, 10rem)       /*Create columns automatically and centers them*/
 }
 
-- CSS Grid Vs Flexbox
+✅ ———————————————— CSS Grid Vs Flexbox ————————————————
 ------------------------------------------------------------------------------
 CSS Grid                            |           Css Flexbox
 ------------------------------------|-----------------------------------------
 two-dimensional Positioning         |           One-dimensional Poisitioning
 
 
-Useful Links:
-
+<Link>
 Flexbox Theory:
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
@@ -189,3 +186,4 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
 
 Css Grid 2
 https://css-tricks.com/snippets/css/complete-guide-grid/
+<Link>

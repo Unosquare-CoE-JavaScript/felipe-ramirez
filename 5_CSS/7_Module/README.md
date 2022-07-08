@@ -1,19 +1,20 @@
-SASS
-Content:
+<!------------------------------------------------------------------------------------------------------------------------------>SASS
+Tags
+Nested Rules
+Helper Functions
+Inherintance
+Mixins
+Partials
+Conditions and loops
+Variables
 
-- What is SASS / SCSS:
+✅ ———————————————— What is SASS / SCSS ————————————————
+<Link>
+https://sass-lang.com
+</Link>
 Syntactically Awesome Style Sheets
 Does not run in the browser
 Exends CSS during Development
-
-- SASS Features
-.   Nested Rules
-.   Helper Functions
-.   Inherintance
-.   Mixins
-.   Partials
-.   Conditions and loops
-.   Variables
 
 
 To Install SASS
@@ -33,7 +34,7 @@ html {
     font-size: 94.75%;                  /*This extensions support ; and {}*/
 }
 
-- Nesting Selectors:
+✅ ———————————————— Nesting Selectors ————————————————
     .class {
         margin: 1rem
 
@@ -60,7 +61,7 @@ run sass --wathc main.scss:main.css
     This automatically recompile the scss file an create the css file
 
 
-- Nested Properties
+✅ ———————————————— Nested Properties ————————————————
 .container {
     flex-direction: column;
     flex-wrap: nowrap
@@ -73,7 +74,7 @@ Using SCSS
     }
 }
 
-- Variables
+✅ ———————————————— Variables
 at the top of the file define variables:
 
 $main-color: red;
@@ -83,7 +84,7 @@ $another-variable: value
     background-color: $main-color
 }
 
-- Storing Lists and Maps in variables
+✅ ———————————————— Storing Lists and Maps in variables ————————————————
 
 $border-default: 0.05rem solid $main-color      /*This stores a list of values*/
 $colors: (main: red, secondary: $main-color);     /*This is a map, key and value are stored*/
@@ -92,14 +93,14 @@ To get a value:
 map-get($colors, main)
 
 
-- Better Imports and Partials
+-✅ ————————————————Better Imports and Partials ————————————————
 
 name a file like: _variables.scss (This is a partial)
 put the variables
 and import into the main file
 @import "_variables.scss"
 
-- Improving Media Queries:
+✅ ———————————————— Improving Media Queries ————————————————
 
 html {
     font-size: 94.75%;
@@ -109,7 +110,7 @@ html {
     }
 }
 
-- Inheritance:
+✅ ———————————————— Inheritance ————————————————
 
     .sass-section {
         some properties to share
@@ -120,7 +121,7 @@ html {
         margin: 1rem
     }
 
-- Mixins:
+✅ ———————————————— Mixins ————————————————
 
 .container{
     display: -webkit...;
@@ -158,7 +159,7 @@ You can also use arguments
     }
 }
 
-- Ampersand Operator:
+✅ ———————————————— Ampersand Operator ————————————————
 
 .documentation-link{
 

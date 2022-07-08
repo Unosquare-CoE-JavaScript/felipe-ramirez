@@ -1,13 +1,13 @@
-Styling
+<!------------------------------------------------------------------------------------------------------------------------------>Styling
 
-Content:
+Tags:
 
 - Conditional and Dynamic styles
 - Styled components
 - CSS Modules
 
 
-- Conditional and Dynamic styles
+✅ ———————————————— Conditional and Dynamic styles ————————————————
 This is one way (Inline Styles)
 const [isValid, setIsValid] = useState(true);
 
@@ -65,14 +65,18 @@ return (
     </div>
 )
 
-- Styled Components
+✅ ———————————————— Styled Components ————————————————
+<Link>
 https://styled-components.com/
+</Link>
 
-- CSS Modules
+✅ ————————————————CSS Modules ————————————————
+<Link>
 https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
+</Link>
 
 
-<!---------------------------------------------------------------------------------------------------------- Debugging-->
+<!------------------------------------------------------------------------------------------------------------------------------>Debbuging
 Browser Breakpoints
 React DevTools
 

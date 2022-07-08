@@ -1,11 +1,11 @@
-_____________________________________________User Interaction and State
+<!------------------------------------------------------------------------------------------------------------------------------>User Interaction and State
 
-Content:
+Tags:
 - Handling Events
 - Updating the UI and working with State
 - A closer look at components and State
 
-Events and States:
+✅ ————————————————  Events and States  ————————————————
 
     ExpenseItem.js ---->
     import React, { useState } from 'react';
@@ -123,7 +123,7 @@ const NewExpense = (props) => {
 
 export defautl NewExpense
 
-- Child-to-parent Component Comunication Botton-up
+✅ ————————————————  Child-to-parent Component Comunication Botton-up  ————————————————
 In this case NewExpense is a parent of NewExpenseForm (described in the last item)
 
 NewExpense.js --->
