@@ -1,12 +1,12 @@
-Next JS
+<!------------------------------------------------------------------------------------------------------------------------------>Next JS
 
-Module content
+Tags
 
 - What is NextJS and why to use it
 - Filebase routing and page pre-rendering
 - Data fetching and adding and API
 
-<!-----------------------------------------------------------------Basic Concepts--->
+✅ ————————————————Basic Concepts  ————————————————
 
 - NextJS
   The React framework for Production
@@ -61,7 +61,7 @@ news.js
 --package-lock.json
 
 
-- Adding Nested Routes
+✅ ———————————————— Adding Nested Routes  ————————————————
 
 --Pages
 _app.js
@@ -90,7 +90,7 @@ index.js
         export default nestedPath
 
 
-- Dynamic Pages with Parameters
+✅ ———————————————— Dynamic Pages with Parameters ————————————————
 
 -- news
     -- index.js
@@ -114,7 +114,7 @@ index.js
 
         export default nestedPath
 
-- Linking between pages
+✅ ———————————————— Linking between pages ————————————————
 
 -- news
     import Link from 'next/link'
@@ -133,7 +133,7 @@ index.js
         }
         export default HomePage;
 
-- Starting the project
+✅ ———————————————— Starting the project ————————————————
 
 -- pages
     _app.js
@@ -172,7 +172,7 @@ index.js
         someUIComponent.module.css
 
 
-- _app.js File
+✅ ———————————————— _app.js File ————————————————
 It works like the layout component
 
 import {Layout} from '../../components/Layout'
@@ -200,7 +200,7 @@ function MeetupItem () {
     )
 }
 
-- Data Fetching for static pages
+✅ ———————————————— Data Fetching for static pages ————————————————
 
 Two forms of pre-rendering
 1. Static Generation
@@ -234,7 +234,7 @@ Two forms of pre-rendering
 
 
 
-- Server Side Rendering (SSR)
+✅ ———————————————— Server Side Rendering (SSR) ————————————————
         function HomePage (props) {
         const [loadedData, setLoadedData ] = useState([]);
         useEffect(()=>{
@@ -261,7 +261,7 @@ Two forms of pre-rendering
 
     export default HomePage()
 
-- Example using SSG - Static Generation
+✅ ———————————————— Example using SSG - Static Generation ————————————————
 Using params
 
 export async function getStaticPaths () {
@@ -306,7 +306,7 @@ export async function
 
 
 
-- API Routes
+✅ ———————————————— API Routes ————————————————
 
 It allows to create our APIS using NEXT
 Create an api folder into the pages folder in order to tell next they are your apis
@@ -399,7 +399,7 @@ function NewMeetupPage () {
 }
 export default NewMeetupPage;
 
-- Fetching data
+✅ ———————————————— Fetching data ————————————————
 
 Use this in the component Page where you need it
 

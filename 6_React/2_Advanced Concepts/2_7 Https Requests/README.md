@@ -1,15 +1,14 @@
-Connecting a Backend and DB
+<!------------------------------------------------------------------------------------------------------------------------------>Connecting a Backend and DB
 Sending https Requests:
 
-Content
+Tags
 
 - How do React Apps Interact with DB
 - Sending Https Request 
 - Handling Errors
 
---------------------------------------------------------------------
 
-- How to not connect to a DB
+✅ ————————————————How to not connect to a DB ————————————————
 bowser-side Apps don't directly talk to DB's
 React App - Backend App - Database
 
@@ -21,7 +20,7 @@ Loading this page (and hence accessing this backend) might fail - if that is the
 
 
 
-- Get Request
+✅ ————————————————Get Request ————————————————
 Axios
 Fetch
 
@@ -65,9 +64,9 @@ const fetchMoviesHandle = useCallback(() => {
 }, [])
 
 - HTTPS Status
+<Link>
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-
-- Firebase
+</Link>
 
 
  

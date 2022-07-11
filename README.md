@@ -108,6 +108,24 @@ General Content:
         * ReactJs Summary
 
 7. 7_Testing
+    - Eslint and Prettier
+    - Mockind data
+    - Testing in a Provider
+    
 8. 8_React Patterns
+    - Custom Hooks
+    - Compound Components
+    - Extensible Components
+    - Control Props
+    - Props Collection
+    - Props Getters
+    - State Initialiser
+    - State Reducer
+
 9. 9_React 18
+    - Suspense
+    - useDeferredValue
+    - useTransition
+    - useMutableSource
+    - useOpaqueIdentifier
 

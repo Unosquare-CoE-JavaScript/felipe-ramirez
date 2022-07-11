@@ -1,4 +1,4 @@
-More Complex Tests:
+<!------------------------------------------------------------------------------------------------------------------------------> More Complex Tests:
 
 import {render, screen, fireEvent} form '@testing-library/react'
 test('Initial Conditions', () => {
@@ -11,7 +11,7 @@ test('Initial Conditions', () => {
     expect(confirmButton).toBeDisabled();
 })
 
-- React Bootstrap popover and Testing Library User Event
+✅ ———————————————— React Bootstrap popover and Testing Library User Event ————————————————
 
 userEvent to replace fireEvent
 
@@ -28,7 +28,7 @@ test('popover responds to hover', () => {
     // popover disappears when we mouse out
 })
 
-- Screen Query Methodscommand[All]ByQueryType
+✅ ———————————————— Screen Query Methodscommand[All]ByQueryType ————————————————
 
 command:
     - get: expect element to be in the DOM
@@ -48,11 +48,13 @@ QueryType:
         LabelText
         DisplayValue
 
+<Link>
 https://testing-library.com/docs/queries/about/
 https://testing-library.com/docs/react-testing-library/cheatsheet/
 https://testing-library.com/docs/queries/about/#priority
+</Link>
 
-- Testing elements is NOT on the page: Start popover test:
+✅ ———————————————— Testing elements is NOT on the page: Start popover test: ————————————————
 import waitForElementToBeRemoved 
 import userEvent from '@testing-library/userEvent'
 

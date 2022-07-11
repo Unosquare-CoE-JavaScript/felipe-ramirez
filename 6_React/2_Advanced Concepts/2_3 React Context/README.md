@@ -1,9 +1,9 @@
-Context API
+<!------------------------------------------------------------------------------------------------------------------------------>Context API
 
-Content:
+Tags:
 Using the React Context API
 
-
+✅ ———————————————— Concept  ————————————————
 Component-wide behind the scenes stage Storage 
 store
 auth-context.js 
@@ -56,7 +56,7 @@ return (
     </div>
 )
 
-- Making Context Dynamic:
+✅ ———————————————— Making Context Dynamic:  ————————————————
 
 go to the App.js
 
@@ -74,7 +74,7 @@ return (
     </AuthContext.Provider>
 )
 
-- Learning Rules of Hooks
+✅ ———————————————— Learning Rules of Hooks  ————————————————
 useState
 useEffect
 useReducer

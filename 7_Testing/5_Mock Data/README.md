@@ -1,10 +1,12 @@
-- Mock Service Worker and Handlers
+<!------------------------------------------------------------------------------------------------------------------------------> Mock Service Worker and Handlers
 
 Purpose:
     Intercept network calls
     return specified responses
 Preventw network calls during tests
 Set up conditions using server response
+
+✅ ———————————————— Steps  ————————————————
 
 npm install msw (mock service worker);
 
@@ -40,8 +42,9 @@ mocks
 
 Modify the file
 setupTest.js 
+<Link>
 https://mswjs.io/docs/getting-started/integrate/node
-
+</Link>
 
 - Test with Mock service Worker
 
@@ -64,17 +67,20 @@ https://mswjs.io/docs/getting-started/integrate/node
     })
 
 
-- Using await findBy to find Elements that popuate Async
+✅ ———————————————— Using await findBy to find Elements that popuate Async ————————————————
+
     When youre waiting for smthg to appear async on the page ou must use await FINDBY
     
 
-- Jest Debugging Tools
+✅ ———————————————— Jest Debugging Tools ————————————————
+
     Jest debugging tools
         running only one test file
         running only one test within a file
 
 
-- Example:
+
+✅ ———————————————— Example: ————————————————
     OrderEntry.jsx
     export default function OrderEntry () {
         return <div></div>

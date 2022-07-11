@@ -1,8 +1,9 @@
-Redux
+<!------------------------------------------------------------------------------------------------------------------------------>Redux
+Tags:
 Redux Basics and Redux using react
 Redux Toolkit
 
-What is Redux
+✅ ————————————————What is Redux ————————————————
 Cross-component App-wide State
 
 Local state -->
@@ -19,8 +20,7 @@ state that affect the entire app (most/all components)
 Requires props chains/props drilling
 React Context or Redux
 
-<!------------------------------------------------------------------->
-- React Context Vs Redux
+✅ ———————————————— React Context Vs Redux ————————————————
 
 1. React Context Potential Disadvantages
 Complex setup / Managment
@@ -35,7 +35,7 @@ We can use it inside our Components through Subscriptions
 Reducer Function is responsible for Mutates /changes Store data (Not the same as useReducer Reducer Functions are General concepts)
 Component DISPATCH Action (JS object that describes the kind of operation that mutates store data)
 
-- Core Redux Concepts
+✅ ———————————————— Core Redux Concepts ————————————————
 
 const redux = require('redux');
 
@@ -69,7 +69,7 @@ store.dispatch({type: 'increment' });
 store.dispatch({type: 'decrement' })
 
 
-- React with Redux
+✅ ———————————————— React with Redux ————————————————
 
 npm install redux
 npm install react-redux
@@ -133,7 +133,7 @@ const Counter = () => {
     )
 }
 
-- Attaching Payloads to actions
+✅ ———————————————— Attaching Payloads to actions ————————————————
 
 Go to store
 const counterReducer = (state= {counter: 0}, action) => {
@@ -174,8 +174,10 @@ Action Types can be very hard coded
 Manage State might become a problem because you always have to rewrite the entire object
  
 
-- Redux Toolkit
+✅ ———————————————— Redux Toolkit ————————————————
+<Link>
 https://redux-toolkit.js.org
+</Link>
 
 npm install redux-toolkit
 
@@ -234,7 +236,7 @@ const increaseHandler = () => {
     dispatch(counterActions.increase(5));
 }
 
-- Working with multiple Slices:
+✅ ———————————————— Working with multiple Slices: ————————————————
 
 on Store/index.js
 
@@ -298,7 +300,7 @@ const Login = () =>  {
     )
 }
 
-- Split Our code:
+✅ ———————————————— Split Our code: ————————————————
 
 /store
 
@@ -332,11 +334,10 @@ export default store
 
 And in every component, import actions from every single file
 
-<!---------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------------>Advanced Redux
 
-Advanced Redux
 
-- Side Effects, async Tasks and Redux
+✅ ———————————————— Side Effects, async Tasks and Redux ————————————————
 
 Reducers must be pure, side-effect free and synchronous functions
 
@@ -346,7 +347,7 @@ Inside the components
 
 Inside the actions creators
 
-- Redux and Async Code
+✅ ———————————————— Redux and Async Code ————————————————
 
 You can't use request inside a reducers nor impure functions
 
@@ -354,16 +355,16 @@ You can't use request inside a reducers nor impure functions
 
 instead of using async code in Reducers, do all the heavy work in Reducers
 
-- THUNKS
+✅ ———————————————— THUNKS ————————————————
 
 A function that delays an action until later
 an action creator function that does not return the action itself but another function which eventually return the action
 
-- Redux Devtools
+✅ ———————————————— Redux Devtools ————————————————
 
-Link to resources
+<Link>
 https://github.com/academind/react-complete-guide-code/tree/19-advanced-redux
-
+</Link>
 
 
 

@@ -1,11 +1,11 @@
-Custom React Hooks:
+<!------------------------------------------------------------------------------------------------------------------------------>Custom React Hooks:
 
-Content:
+Tags:
 
 - Building Custom hook
 - Custom hook rules
 
-What are custom hooks:
+✅ ———————————————— What are custom hooks:————————————————
 Regular functions but they are functions that can contain outsource stateful logic into reusable functions
 
 --hooks
@@ -55,7 +55,7 @@ Regular functions but they are functions that can contain outsource stateful log
     export default BackwardCounter;
 
 
-- Another Example of Custom React Hooks
+✅ ————————————————Another Example of Custom React Hooks ————————————————
 
 Making http request
 
@@ -112,5 +112,7 @@ function App() {
     
 }
 
-- bind Method
+✅ ————————————————bind Method ————————————————
+<Link>
 https://academind.com/tutorials/function-bind-event-execution
+</Link>

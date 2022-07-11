@@ -1,11 +1,11 @@
-Animating React Apps and Components:
+<!------------------------------------------------------------------------------------------------------------------------------>Animating React Apps and Components:
 
 Adding Smooth Animations to our Apps
 
 - CSS Animations and why they are not enough
 - Animating React Components with Extra Libraries
 
-- CSS transitions:
+✅ ———————————————— CSS transitions: ————————————————
 After adding the logic in the component to show and hide a modal
 
 .Modal {
@@ -24,7 +24,7 @@ ModalClosed {
     transform: translateY(-100);
 }
 
-- CSS Animations:
+✅ ———————————————— CSS Animations: ————————————————
 
 .ModalOpen {
     animation: openModal 0.4s ease-out forwards;
@@ -66,11 +66,11 @@ ModalClosed {
     }
 }
 
-- CSS Limitations:
+✅ ————————————————CSS Limitations: ————————————————
 
 It populates the dom and its not that "react", and we can lose animations
 
-- React Transitions Group:
+✅ ———————————————— React Transitions Group: ————————————————
 
 npm install react-transition-group --save
 
@@ -98,7 +98,7 @@ return (
     </ Transition>
 )
 
-- Applyng to the project
+✅ ———————————————— Applyng to the project ————————————————
 
 import Transition from 'react-transition-group/Transition'
 
@@ -138,7 +138,7 @@ const modal = props = () => {
     )
 }
 
-- Animation Timing
+✅ ———————————————— Animation Timing  ————————————————
 
 const animationTiming = {
     enter: 400,
@@ -160,7 +160,7 @@ const modal = props => {
     )
 }
 
-- Parameters on Transistion
+✅ ———————————————— Parameters on Transistion  ————————————————
 <Transition
     onEnter={}
     onEntering={}
@@ -172,7 +172,7 @@ const modal = props => {
 </Transition>
 
 
-- The CSSTransition Component
+✅ ———————————————— The CSSTransition Component ————————————————
 
 import CSSTransition from 'react-transition-group/CSSTransition';
 
@@ -231,8 +231,8 @@ and use the same .css file that you created before
 - Animating Lists
 <TransitionGroup component="ul"></TransitionGroup>
 
--------
-Another Options:
+
+✅ ————————————————Another Options: ————————————————
 React-Motion
 React-Move
 React router transition

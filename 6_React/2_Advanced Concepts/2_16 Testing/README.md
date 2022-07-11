@@ -1,13 +1,12 @@
-Testing React Apps
+<!------------------------------------------------------------------------------------------------------------------------------>Testing React Apps
 
-Automated Testing
-Content:
+Tags:
 
 - What is testing
 - Unit Test
 - Testing React Components and building Blocks
 
-- What is testing
+✅ ———————————————— What is testing ———————————————— 
 
 Manual Testing:
 write code preview and test in browser
@@ -19,7 +18,7 @@ write extra-code that runs and test your code
 You test the individual building blocks of your app
 It is very technical but allows you to test all building blocks all at once
 
-- Different kinds of automated Tests:
+✅ ———————————————— Different kinds of automated Tests: ———————————————— 
 
 * Unit Test:
   Test the individual building blocks (function components) in isolation
@@ -36,7 +35,7 @@ It is very technical but allows you to test all building blocks all at once
   Projects typically contains only a few e2e test
   Important but can also be done manually
 
-- What to test and how
+✅ ———————————————— What to test and how ———————————————— 
     What:
     Test the different building blocks 
     unit Tests: the smalles building blocks that make up your app
@@ -45,7 +44,7 @@ It is very technical but allows you to test all building blocks all at once
     Test success and error cases, also test reare but possible results
 
 
-- Technical setup and involved tools
+✅ ———————————————— Technical setup and involved tools ———————————————— 
 We need a tool for running our test and asserting the results 
 we need a tool for simulating our react app/component
 
@@ -55,7 +54,7 @@ we need a tool for simulating our react app/component
 
 They are installed automatically using create-react-app
 
-- Example:
+✅ ———————————————— Example: ———————————————— 
 npx create-react-app some-name
 
 -- src
@@ -120,7 +119,7 @@ Act -> Run logic that should be tested
 
 Assert -> Compare execution results with expected results
 
-- Grouping Test with Test suites
+✅ ———————————————— Grouping Test with Test suites ———————————————— 
 
 describe('Greeting Component', () => {
     test('renders Hello world as a text', ()=> {
@@ -130,8 +129,8 @@ describe('Greeting Component', () => {
     })
 })
 
-
-- More Powerful test:
+ 
+✅ ———————————————— More Powerful test: ———————————————— 
 
 Greeting.js
 import {useState } from 'react';
@@ -187,7 +186,7 @@ describe('Greeting Component', () => {
     });
 })
 
-- Testing connected Components
+✅ ———————————————— Testing connected Components
 
 <Output>
 Output.js
@@ -216,7 +215,7 @@ const Greeting = () => {
     )
 }
 
-- Testing Asynchronous code:
+✅ ———————————————— Testing Asynchronous code: ———————————————— 
 <Async>
 Async.js
 
@@ -249,7 +248,7 @@ describe('Async Component', () => {
     })
 }
 
-- Working with Mocks
+✅ ———————————————— Working with Mocks ———————————————— 
 use dummy function to simulate fetch
 
 describe('Async Component', () => {
@@ -265,7 +264,7 @@ describe('Async Component', () => {
     })
 }
 
-- Important tools:
+✅ ———————————————— Important tools:———————————————— 
 Jest
 
 

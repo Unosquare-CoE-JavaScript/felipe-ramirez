@@ -1,8 +1,8 @@
-Replacing Redux with React Hooks
+<!------------------------------------------------------------------------------------------------------------------------------>Replacing Redux with React Hooks
 
-Content:
+Tags:
 
-Using hooks to replace Redux
+✅ ————————————————  Using hooks to replace Redux ———————————————— 
 
 hooks-store
     store.js

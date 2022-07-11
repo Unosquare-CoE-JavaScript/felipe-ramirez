@@ -1,15 +1,15 @@
-React + Typescript
-
+<!------------------------------------------------------------------------------------------------------------------------------>React + Typescript
+Tags:
 - What and Why
 - Typescript Basics
 - Combining React and TS
 
 
-TypeScript:
+✅ ———————————————— TypeScript: ———————————————— 
 Is a super superset to JS
 TS add static typing to JS
 
-JS File
+* JS File
 function add (a,b) {
     return a + b;
 }
@@ -19,7 +19,7 @@ const result = add(2,5); // JS does not make any difference about the type of da
 
 console.log(result);
 
-TS File
+* TS File
 function add (a: number, b: number) {       //Type is defined here
     return a + b;
 }
@@ -71,17 +71,17 @@ let person: {
 }[];        // This means an array of objects!!
 
 
-- Type Inference:
+✅ ————————————————Type Inference: ———————————————— 
 
 let course = 'React- the complete guide'
 
 course = 1234   // This infers the type of the first assignment
 
-- Union Types:
+✅ ———————————————— Union Types: ———————————————— 
 
 let course: string | number = 'React - the complete guide';
 
-- Type Aliases:
+✅ ———————————————— Type Aliases: ———————————————— 
 
 type Person = {
     name: string,
@@ -90,13 +90,13 @@ type Person = {
 
 let people: Person[]
 
-- Function and function Types:
+✅ ———————————————— Function and function Types: ———————————————— 
 
 function add (a: number,b: number): number | string {
     return a + b;
 }
 
-- Diving into Generics
+✅ ———————————————— Diving into Generics ———————————————— 
 
 
 function insertAtBeginning<T>(array:T[], value:T) {         // Adding T it infers the type of values of arguments
@@ -145,7 +145,7 @@ const stringArray = insertAtBeginning<string>(['a', 'b', 'c'], 'd');
 So we can not just use the angle brackets to define a generic type but also to USE a generic type and explicitly set the placeholder type that should be used - sometimes this is required if TypeScript is not able to infer the (correct) type. We'll see this later in this course section!
 
 
-- Creating a React + TS Project
+✅ ———————————————— Creating a React + TS Project ———————————————— 
 
 npx create-react-app name --template typescript
 
@@ -173,7 +173,7 @@ function App() {
     )
 }
 
-- Data model
+✅ ———————————————— Data model ———————————————— 
 
 todo.ts
 
@@ -202,7 +202,7 @@ function App() {
     )
 }
 
-- Form submission in TS
+✅ ———————————————— Form submission in TS ———————————————— 
 
 const submitHandler = (event: React.FormEvent) => {
     event.preventDefault()
@@ -210,19 +210,19 @@ const submitHandler = (event: React.FormEvent) => {
 
 <form onSubmit={submitHandler}></form>
 
-- Ref and useRef
+✅ ———————————————— Ref and useRef ———————————————— 
 
 const todoTextInputRef = useRef<HTMLInputElement>(null);
 
 const enteredText = todoTextInputRef.current!.value;
 
-- Function Props:
+✅ ————————————————Function Props: ———————————————— 
 
 const newTodo: React.FC<{onAddTodo: (text: string)=> void}> = props => {
 
 }
 
-- Managing state with TS
+✅ ———————————————— Managing state with TS ———————————————— 
 
 import {useState} from 'react';
 

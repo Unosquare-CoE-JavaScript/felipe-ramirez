@@ -1,10 +1,10 @@
-ESLint
+<!------------------------------------------------------------------------------------------------------------------------------>ESLint
 Popular linter for JS
 
 Linter: Analyzes static text and marks syndax that breaks rules
 Static: anaylze code as written, not when code is run
 
-Linting VS Formatting:
+✅ ———————————————— Linting VS Formatting: ————————————————
 Formatters (like Prettier) automatically format code(indents, sasing)
 example:
     spaces around curly braces
@@ -16,13 +16,15 @@ example:
     expect(checkbox).toBeChecked());
 
 
-ESLint Plugins
+✅ ———————————————— ESLint Plugins ————————————————
     Plug-ins extend ESLint
     Testing library and jest-dom ESLint Plugins
 
-https://github.com/testing-library/eslint-plugin-testing-library
-https://github.com/testing-library/eslint-plugin-jest-dom
-https://github.com/bonnie/bonniedotdev/blob/main/client/.eslintrc.json
+<Link>
+    https://github.com/testing-library/eslint-plugin-testing-library
+    https://github.com/testing-library/eslint-plugin-jest-dom
+    https://github.com/bonnie/bonniedotdev/blob/main/client/.eslintrc.json
+</Link>
 
 * ESLint for Testing Library and Jest-DOM
 npm install eslint-plugin-testing-library
