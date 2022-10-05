@@ -1,4 +1,8 @@
-------------------------------------------React---------------------------------------------------------
+<!------------------------------------------------------------------------------------------------------------------------------>JS
+Tags:
+- React Core Syntax and JSX
+- Working with components
+- Working with data
 
 A client-side JS library
 All about building modern reactive user interfaces
@@ -10,17 +14,17 @@ React can also be used to control the entire front end of a web app
 
 In this module, I provided a brief introduction into some core next-gen JavaScript features, of course focusing on the ones you'll see the most in this course. Here's a quick summary!
 
-let & const
+✅ ———————————————— let & const  ————————————————
 Read more about let : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
 
 Read more about const : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 
 let  and const  basically replace var . You use let  instead of var  and const  instead of var  if you plan on never re-assigning this "variable" (effectively turning it into a constant therefore).
 
-ES6 Arrow Functions
+✅ ————————————————ES6 Arrow Functions  ————————————————
 Read more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
-Arrow functions are a different way of creating functions in JavaScript. Besides a shorter syntax, they offer advantages when it comes to keeping the scope of the this  keyword (see here).
+Arrow functions are a different way of creating functions in JavaScript. Besides a shorter syntax, they offer advantages when it comes to keeping the scope of the this  keyword (see here)
 
 Arrow function syntax may look strange but it's actually simple.
 
@@ -57,7 +61,8 @@ That's equal to:
 const returnMe = name => { 
     return name;
 }
-Exports & Imports
+
+✅ ———————————————— Exports & Imports  ————————————————
 In React projects (and actually in all modern JavaScript projects), you split your code across multiple JavaScript files - so-called modules. You do this, to keep each file/ module focused and manageable.
 
 To still access functionality in another file, you need export  (to make it available) and import  (to get access) statements.
@@ -86,7 +91,7 @@ import * as upToYou from './path/to/file.js';
 
 upToYou  is - well - up to you and simply bundles all exported variables/functions in one JavaScript object. For example, if you export const someData = ...  (/path/to/file.js ) you can access it on upToYou  like this: upToYou.someData .
 
-Classes
+✅ ———————————————— Classes  ————————————————
 Classes are a feature which basically replace constructor functions and prototypes. You can define blueprints for JavaScript objects with them. 
 
 Like this:
@@ -99,6 +104,7 @@ class Person {
  
 const person = new Person();
 console.log(person.name); // prints 'Max'
+
 In the above example, not only the class but also a property of that class (=> name ) is defined. The syntax you see there, is the "old" syntax for defining properties. In modern JavaScript projects (as the one used in this course), you can use the following, more convenient way of defining class properties:
 
 class Person {
@@ -175,7 +181,7 @@ newObject  would then be
 }
 The spread operator is extremely useful for cloning arrays and objects. Since both are reference types (and not primitives), copying them safely (i.e. preventing future mutation of the copied original) can be tricky. With the spread operator you have an easy way of creating a (shallow!) clone of the object or array. 
 
-Destructuring
+✅ ———————————————— Destructuring  ————————————————
 Destructuring allows you to easily access the values of arrays or objects and assign them to variables.
 
 Here's an example for an array:
@@ -210,7 +216,7 @@ printName({name: 'Max', age: 28}); // prints 'Max')
 We get the same result as above but we save some code. By destructuring, we simply pull out the name  property and store it in a variable/ argument named name  which we then can use in the function body.
 
 
-JS Array Functions
+✅ ———————————————— JS Array Functions  ————————————————
 Not really next-gen JavaScript, but also important: JavaScript array functions like map() , filter() , reduce()  etc.
 
 You'll see me use them quite a bit since a lot of React concepts rely on working with arrays (in immutable ways).
@@ -219,6 +225,7 @@ The following page gives a good overview over the various methods you can use on
 
 Particularly important in this course are:
 
+<Link>
 map()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 find()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 findIndex()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
@@ -227,30 +234,29 @@ reduce()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/G
 concat()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=b
 slice()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 splice()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+</Link>
 
 
 
 
-<!----------------------------------------------------------------------------------------------------------------------------->
-
-___________________________________________________React Basics_______________________________________________________________
+<!------------------------------------------------------------------------------------------------------------------------------>React Basics
 
 Content:
 - React Core Syntax and JSX
 - Working with components
 - Working with data
-------------------------------------------------------------------------------------------------------
 
-- Components:
+
+✅ ———————————————— Components  ————————————————
 React is all about Components
 A component 
 Reusability     ---->>> DRY (Dont Repeat yourself)
 Separation of concerns      ----->>> Don't doo many things in one and the same place (function)
 
-- How is a Component Built
+✅ ————————————————How is a Component Built ————————————————
 HTML    +   CSS     +      JS        =       React
 
-- How React Works?
+✅ ———————————————— How React Works? ————————————————
 
     App Component is an special component which imports our components
     Convention to name components, example:
@@ -279,7 +285,7 @@ HTML    +   CSS     +      JS        =       React
         )
     }
 
-- JSX Code and CSS Styling
+✅ ———————————————— JSX Code and CSS Styling ————————————————
     ExpenseItem.css ---->
     ...css code
 
@@ -302,7 +308,7 @@ HTML    +   CSS     +      JS        =       React
     export default ExpenseItem;
 
 
-- Dynamic Content using Props
+✅ ———————————————— Dynamic Content using Props ————————————————
 
     App.js --->
     import ExpenseItem from './path/ExpenseItem'
@@ -344,7 +350,7 @@ HTML    +   CSS     +      JS        =       React
     export default ExpenseItem;
 
 
-- Composition - Children Props
+✅ ————————————————Composition - Children Props ————————————————
     To recycle styles, we create components like Card, which will have a component with all styles of a Card 
 
     Card.css
@@ -401,7 +407,7 @@ export default ExpenseItem;
 |   |    |    Card.css
 |   App.js
 
-- Alternative Function Syntax
+✅ ———————————————— Alternative Function Syntax ————————————————
 
 const App = () => {
     ... content ...

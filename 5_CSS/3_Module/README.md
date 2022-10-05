@@ -1,25 +1,27 @@
-Content:
-- Position property
-- Fixed Navigation Bars with fixed
-- Positioning elements with z-index
-- Using "Absolute" and "relative" stand alone an combined
-- sticky positioning
-- The stacking context
+<!------------------------------------------------------------------------------------------------------------------------------> Positioning
+
+Tags:
+    Position property
+    Fixed Navigation Bars with fixed
+    Positioning elements with z-index
+    Using "Absolute" and "relative" stand alone an combined
+    sticky positioning
+    The stacking context
 
 Content: Background
-Background property
-Background images
-Gradients
-Filters
+    Background property
+    Background images
+    Gradients
+    Filters
 
 Content: Units and Sizes
-- Which units can we use
-- % and containing block
-- "min-width" and "max-width"
-- rem vs em
-- vw and vh
+    Which units can we use
+    % and containing block
+    "min-width" and "max-width"
+    rem vs em
+    vw and vh
 
-<!-- ------------------------------------------------------------------------------------------ -->Positioning Elements:
+✅ ———————————————— Positioning Elements  ————————————————:
 
 position: static --> Default
 Other values
@@ -42,7 +44,7 @@ html
 body
 <...>
 
-- Using Position to add a Background Image:
+✅ ———————————————— Using Position to add a Background Image ————————————————:
 
 .background {
     position: fixed;
@@ -65,7 +67,7 @@ But giving z-index on elements that have position:static, does not have any effe
     z-index: -1; 
 }
 
-- Absolute and relative Position: 
+✅ ———————————————— Absolute and relative Position  ————————————————: 
 package__badge {
     position: absolute; /*it does not stuck on the viewport, this property depends on the closest ancester with position declared*/
     top: 50px;
@@ -76,7 +78,7 @@ package__badge {
    position: relative /*The context is the element itself, so it moves from the initial position.*/
 
 
-- Sticky Position:
+✅ ———————————————— Sticky Position  ————————————————:
 
 .parent .country {
     position: sticky;
@@ -85,7 +87,7 @@ package__badge {
 }
 
 
-- Stacking Context:
+✅ ———————————————— Stacking Context ————————————————:
     By adding fixed, each element has a stack
 
 Summary:
@@ -108,7 +110,7 @@ Defines stacking behavour of child elements
 
 
 
-<!-- ------------------------------------------------------------------------------------------ -->Images and Background Images
+<!------------------------------------------------------------------------------------------------------------------------------>Images and Background Images
 
 Content: 
 Background property
@@ -116,7 +118,7 @@ Background images
 Gradients
 Filters
 
-- Background size:
+✅ ———————————————— Background size ————————————————:
 
 #property-overview {
     background-image: url('someurl.jpg');
@@ -129,7 +131,7 @@ Filters
     background-repeat: no-repeat /*repeat-x, repeat-y*/
 }
 
-- Background Shorthand:
+✅ ———————————————— Background Shorthand  ————————————————:
 image
 color
 position
@@ -177,7 +179,7 @@ div {
 }
 
 
-<!-- ------------------------------------------------------------------------------------------ -->Sizes and Units:
+<!------------------------------------------------------------------------------------------------------------------------------>Sizes and Units:
 Content:
 - Which units can we use
 - % and containing block
@@ -185,7 +187,7 @@ Content:
 - rem vs em
 - vw and vh
 
-- Units:
+✅ ———————————————— Units  ————————————————:
 Pixels (px)
 Percentage (%)
 root em (rem) 
@@ -193,7 +195,7 @@ em (em)
 viewport height (vh)
 viewport width (vw)
 
-- Which properties can I use?
+✅ ———————————————— Which properties can I use?  ————————————————
 font-size
 Padding
 border
@@ -205,7 +207,7 @@ bottom
 left
 right
 
-- How is the size calculated?
+✅ ————————————————How is the size calculated?  ————————————————
 Absolute lengths --> mostly ignore user settings (px, cm, mm, ...)
 Viewport lengths --> Adjust to current viewport(vh, vw, vmin, vmax)
 Font-Relative lenghts --> Adjunst to default font size (rem, em, ...)
@@ -245,7 +247,7 @@ Units calculated based on the font-size
     1rem is approximately 16px for medium font-size browser setting (the recommended one)
 
 
-- vw and vh:
+✅ ———————————————— vw and vh  ————————————————:
     .someclass {
         height: 100vh;
         width: 100vw
@@ -254,7 +256,7 @@ Units calculated based on the font-size
     vmin, vmax depends on the largest or shortest value in the viewport.
 
 
-- Choosing units:
+✅ ———————————————— Choosing units ————————————————:
     Property                    |   Recommended
     font-size(root element)     |   %
     font-size                   |   rem(em => children only)
@@ -265,7 +267,7 @@ Units calculated based on the font-size
     top bottom left right       |   %
     
 
-
+<Link>
 Useful Links:.
 Background Property:
 https://developer.mozilla.org/en-US/docs/Web/CSS/background
@@ -278,3 +280,5 @@ SVG:
 
 Font size Properties and values:
 https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+
+</Link>

@@ -1,6 +1,6 @@
-Building an Multi-SPA with React Router
+<!------------------------------------------------------------------------------------------------------------------------------>Building an Multi-SPA with React Router
 
-Content:
+Tags:
 - What is Client-side Routing
 - Using React-router
 - Advanced Features: Nested Routes
@@ -8,7 +8,7 @@ Content:
 What is Routing:
 When URL changes, visible content changes
 
-React Router V5 -->
+✅ ———————————————— React Router V5 ————————————————
 
 npm install react-router-dom
 
@@ -43,7 +43,7 @@ root.render(
     </BrowserRouter>
 ) 
 
-- Working with links to move from one page to another
+✅ ———————————————— Working with links to move from one page to another ————————————————
 
 
 function App () {
@@ -84,7 +84,7 @@ const MainHeader = () => {
 }
 
 
-- Use NavLinks:
+✅ ———————————————— Use NavLinks: ————————————————
 To highlight the current page in the application
 
 import {NavLink} from 'react-router-dom';
@@ -106,7 +106,7 @@ const MainHeader = () => {
     )
 }
 
-- Dynamic routes with params
+✅ ———————————————— Dynamic routes with params ————————————————
 
 App.js
 
@@ -149,7 +149,7 @@ const ProductDetail = () => {
 }
 
 
-- Nested Routes:
+✅ ———————————————— Nested Routes: ————————————————
 
 DummyComponent.js --> 
 
@@ -163,13 +163,13 @@ return (
     </section>
 )
 
-- Redirecting the user:
+✅ ———————————————— Redirecting the user: ————————————————
 <Route path='/' exact>
     <Redirect to="/welcome"/>
 </Route>
 
 
-- Prevent Unwanted routing backward
+✅ ———————————————— Prevent Unwanted routing backward ————————————————
 To show a warning if the user accidentally go backward
 
 import useState
@@ -195,7 +195,7 @@ return (
     </Fragment>
 )
 
-- Query Parameters:
+✅ ———————————————— Query Parameters: ————————————————
 
 useLocation
 Give us information about current location 
@@ -216,7 +216,7 @@ const queryParams = new URLSearchParams(location.search); this is from javascrip
 
 const isSortingAscending = queryParams.get('sort') === 'asc'
 
-- more efficient way to use it
+✅ ———————————————— more efficient way to use it ————————————————
 const match = useRouteMatch();
 
 then you can use like
@@ -228,22 +228,22 @@ history.push({
     search: '?sort=desc'
 })
 
-<!-----------------------------------------------------------------------------------Deploying React Apps--->
+<!------------------------------------------------------------------------------------------------------------------------------>Deploying React Apps
 
 From Development To Production
 
-Content:
+Tags:
 - Deployment Steps and pitfalls
 - server Side routing vs client side routing 
 
-Deployment Steps
+✅ ———————————————— Deployment Steps ————————————————
 1. Test Code
 2. Optimize Code
 3. Build App for Production
 4. Upload Production 
 5. Configure Server
 
-- Adding Lazy Code
+✅ ———————————————— Adding Lazy Code ————————————————
 (Optimization Code)
 Lazy loading
 Load code only when it's needed
@@ -264,13 +264,13 @@ function App() {
     )
 }
 
-- Build App for Production
+✅ ———————————————— Build App for Production ————————————————
 
 npm run build
 it creates a build folder
 
 
-- Upload Production Code to server
+✅ ———————————————— Upload Production Code to server ————————————————
 A react SPA is a Static Website
 we need a hosting Provider
 Firebase, is an example

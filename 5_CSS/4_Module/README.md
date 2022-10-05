@@ -1,20 +1,20 @@
-CSS and JavaScript
+<!------------------------------------------------------------------------------------------------------------------------------> CSS and JavaScript
 
-Content:
+Tags:
 - Manipulate Styles via JS
 - Add and remove CSS classes via JS
 
-Content:
+Tags:
 - Responsive Design
 
-Content:
+Tags:
 - Text and Fonts
 - Generic and font Families
 - Using and importing font Families
 - Font Properties
 - Font shorthand
--------------------------------------------------------------------
-- Adding a modal
+
+✅ ———————————————— Adding a modal ————————————————
 <div class="backdrop"></div>
  <div class="modal">
     <h1 class="modal__title">Do you want to continue?</h1>
@@ -40,7 +40,7 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
     });
 }
 
-- Manipulating CSS classes via JS
+✅ ———————————————— Manipulating CSS classes via JS  ————————————————:
     .open {
         display: block;
     }
@@ -58,9 +58,9 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
     and for remove the class:
         modal.classList.remove('open')
 
-<!-- ------------------------------------------------------------------------------------------ --> Responsive Design
+<!------------------------------------------------------------------------------------------------------------------------------> Responsive Design
 
-- Responsive Design
+✅ ———————————————— Responsive Design ————————————————
 On index.html
 add
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,13 +92,13 @@ No design changes                           |                                   
 }
 /*Normally added at the end of the css file*/
 
-- Breaking points for Responsive Design:
+✅ ———————————————— Breaking points for Responsive Design  ————————————————
     mydevice.io
     Examples:
     768 px
     1000 px
 
-- Logical Operators:
+✅ ———————————————— Logical Operators ————————————————
 Examples:
 
     @media (min-width: 40rem)  and (min-height: 60rem){
@@ -119,14 +119,14 @@ Examples:
         }
     }
 
-<!-- ------------------------------------------------------------------------------------------ --> Styling Form Elements:
+<!------------------------------------------------------------------------------------------------------------------------------> Styling Form Elements:
 
 
 Content:
 Styling Inputs and Buttons
 Validation Feedback Styles
 
-Adding a Form:
+✅ ———————————————— Adding a Form  ————————————————:
 
 <form action="index.html" class="signup-form">
     <label for="title">Title</label>
@@ -149,7 +149,7 @@ Adding a Form:
     <button type="submit" class="button">Sign Up</button>
 </form>
 
-- Advanced Attribute Selectors:
+✅ ———————————————— Advanced Attribute Selectors  ————————————————
 [type] {
     color: red;
 }
@@ -190,7 +190,7 @@ Adding a Form:
 }
 <img src="i.CDN.com">
 
-- Example using combinators:
+✅ ———————————————— Example using combinators ————————————————
 
 .signup-form input[id*="terms"],
 .signup-form input[id*="terms] + label {
@@ -222,7 +222,7 @@ button:focus {
 .button[disabled] {
 
 }
-<!-- ------------------------------------------------------------------------------------------ --> Fonts
+<!------------------------------------------------------------------------------------------------------------------------------>Fonts
 Content:
 - Text and Fonts
 - Generic and font Families
@@ -231,7 +231,7 @@ Content:
 - Font shorthand
 
 
-- Generic and font Families
+✅ ———————————————— Generic and font Families  ————————————————
 Generic                                 Font Families
 - serif                                 Times New Roman     Georgia
 - sans-serif                            Helvetica           Verdana
@@ -239,7 +239,7 @@ Generic                                 Font Families
 - monospace                             Courier NEw         Licida Bright
 - fantasy (not that usual)
 
-- Browser Settings:
+✅ ———————————————— Browser Settings  ————————————————
 in Chrome:
     Preferences
     Costumise fonts
@@ -256,7 +256,7 @@ We have 3 options to add Font Family to our Project
     2. Web fonts
     3. Retrieved from server
 
-- Font Family Sintax:
+✅ ———————————————— Font Family Sintax ————————————————
     some-selector {
         font-family "Montserrat", sans-serif /*Font family, generic font (if the frist one is not found)*/
         font-family "Montserrat","Verdana",  sans-serif /*If first font Family is not found, it will look for the next and next and so on*/
@@ -289,7 +289,7 @@ Other type of files that contains font types apart from ttf files
         - woff
         - eot (not supported)
 
-- Font Properties:
+✅ ———————————————— Font Properties ————————————————
         font-size
         font-variant: small-caps /*all small caracters converts to capital letters*/
         font-stretch: ultra-condensed
@@ -306,8 +306,7 @@ Other type of files that contains font types apart from ttf files
 
 
 
-Useful Links:
-
+<Link>
 JavaScript Basics
 https://academind.com/learn/javascript
 
@@ -337,3 +336,4 @@ https://fonts.google.com/
 
 Line-height Property:
 https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+</Link>

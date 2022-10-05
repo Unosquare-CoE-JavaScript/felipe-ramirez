@@ -1,4 +1,6 @@
+<!------------------------------------------------------------------------------------------------------------------------------> Testing in a Provider
 
+✅ ———————————————— Steps  ————————————————
 import render,screen
 import userEvent
 
@@ -16,7 +18,7 @@ test('description for this test', () => {
     expect(scoopsSubtotal).toHaveTextContent('2.00');
 });
 
-- Adding Context to Test Setup, tes catching Error in code:
+- Adding Context to Test Setup, tes catching Error in code: 
 
 test('description for this test', () => {
     render(<Options optionType="scoops" />, { wrapper: OrderDetailsProvider});  /*Could be a redux provider or a context Provider*/
@@ -32,8 +34,10 @@ test('description for this test', () => {
     expect(scoopsSubtotal).toHaveTextContent('2.00');
 });
 
-- Create a custom Render to wrap in Provider by Default
+✅ ———————————————— Create a custom Render to wrap in Provider by Default ————————————————
+<Link>
 https://testing-library.com/docs/react-testing-library/setup/#custom-render
+</Link>
 
 foler:
 test-utils
@@ -49,7 +53,7 @@ test-utils
     And then import everything from here
 
 
-<!--Code quiz-->
+✅ ———————————————— Code quiz ————————————————
 
 describe('grand total', () => {
 
@@ -84,7 +88,7 @@ describe('grand total', () => {
 
 })
 
-- Debugging Tips
+✅ ———————————————— Debugging Tips ————————————————
 
 * screen.debug()
 * Does getBy* fil when there a server call or other async action =
@@ -102,5 +106,7 @@ describe('grand total', () => {
 
 -  Placeholder for function pro (jest.fn())
 
-- Common mistakes using RTL
+✅ ———————————————— Common mistakes using RTL ————————————————
+<Link>
 https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+</Link>

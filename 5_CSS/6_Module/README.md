@@ -1,22 +1,20 @@
-Transforming Elements with CSS Transforms
-
-Content:
+Tags:
 - Rotating Moviing Skewing and Scaling elements
 - 3d Transformations
 
 Transitions and animations
-Content:
+Tags:
 - Transitions
 - Animations
 
 Writing Future-Proof CSS Code
-Content:
+Tags:
 - Modern CSS
 
 
-----------------------------------------------------------------------------------------
+<!------------------------------------------------------------------------------------------------------------------------------>Transforming Elements with CSS Transforms
 
-- Rotating Elements and Setting transform-origin
+✅ ———————————————— Rotating Elements and Setting transform-origin  ————————————————
 
     Rotation
  .someclass {
@@ -28,19 +26,19 @@ Content:
     transform: rotateZ(450deg) translateX(1rem) translateY(1rem)
  }
 
-- Skew and Scale:
+✅ ———————————————— Skew and Scale: ————————————————
 
 .someclass {
     transform: skew(20deg);         /*The image is skewed to the left*/
     transform: scaleX(2);         /*Increments the scale of an image ie*/
 }
 
-- Transformation Shorthands:
+✅ ———————————————— Transformation Shorthands: ————————————————
 .someclass {
     transform: rotate(45dg) translate(3.5rem, -1rem) skew(20deg, 20deg) scale(2)
 }
 
-- Transformations in 3D
+✅ ———————————————— Transformations in 3D ————————————————
 
 .someClass {
     transform: pespective(100px) rotateX(30deg) rotateZ(30deg) translateX(1rem) translateZ(10rem)
@@ -52,9 +50,9 @@ parent-element-class {
     perspetive-origin: right
 }
 
-<!-- ------------------------------------------------------------------------------------------ --> Transitions and animations
+<!------------------------------------------------------------------------------------------------------------------------------> Transitions and animations
 
-----------------------------------------------  Transitions:
+✅ ————————————————  Transitions ————————————————
 - Property: transition
 
 .modal {
@@ -70,7 +68,7 @@ parent-element-class {
     transform: transalateY(0);
 }
 
-- Timing Functions:
+✅ ———————————————— Timing Functions ————————————————
 go to easing functions on google to see the graphics available
 
 ------------------------------------------------    Animations:
@@ -108,7 +106,7 @@ More than two states:
     }
 }
 
-- Using JS Animation Event Listeners:
+✅ ———————————————— Using JS Animation Event Listeners ————————————————
 
 var ctaButton = document.querySelector(".main-nav__item--cta")
 
@@ -122,14 +120,14 @@ ctaButton.addEventListener('animationiteration', function (event) {
     console.log('animation iteration', event)
 })
 
-<!-- ------------------------------------------------------------------------------------------ --> Writing Future-proof CSS Code:
+<!------------------------------------------------------------------------------------------------------------------------------> Writing Future-proof CSS Code:
 
 
-- CSS Modules and Their Working Groups:
+✅ ———————————————— CSS Modules and Their Working Groups ————————————————
 
 Go to https://www.w3.org/TR/tr-groups-all#tr_Cascading_Style_Sheets__CSS__Working_Group
 
-- Using CSS Variables:
+✅ ————————————————Using CSS Variables ————————————————
 
 :root {
     --my-color: red;
@@ -143,7 +141,8 @@ Go to https://www.w3.org/TR/tr-groups-all#tr_Cascading_Style_Sheets__CSS__Workin
     color: var(--my-color, green)   /*The second value is used in case the first one is not defined*/
 }
 
-- Vendor Prefixes: Properties depends on the browser and how old is the version of the browser
+✅ ———————————————— Vendor Prefixes ————————————————
+Properties depends on the browser and how old is the version of the browser 
 .container {
     display: -webkit-box;
     display: -ms-flexbox
@@ -153,7 +152,7 @@ Go to https://www.w3.org/TR/tr-groups-all#tr_Cascading_Style_Sheets__CSS__Workin
 To decide which prefix to use, go to:
 autoprefixer
 
-- Detecting Browser Suppor with @supports
+✅ ———————————————— Detecting Browser Support with @supports ————————————————
 
 body {
     padding-top: 3.5rem
@@ -166,13 +165,13 @@ body {
     }
 }
 
-- Polyfills
+✅ ———————————————— Polyfills ————————————————
 Is a JS Package which enables certain CSS features in Browsers which would not support it otherwise
 
-- Eliminating Cross-Browser Inconsistencies
+✅ ————————————————Eliminating Cross-Browser Inconsistencies ————————————————
 Use Reset-library (Normalize.css)
 
-- How to name CSS Classes:
+✅ ———————————————— How to name CSS Classes ————————————————
 Do                                  Don't  
 use kebab-case                      use snakeCase
 name by feature                     name by style
@@ -188,7 +187,7 @@ Example:                                                        /*
 .menu-main__item--size-big                                      /*
 /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*
 
-- Vanilla CSS vs CSS Frameworks:
+✅ ———————————————— Vanilla CSS vs CSS Frameworks ————————————————
 1. Vanilla CSS
     Advantages
         full control
@@ -217,8 +216,8 @@ Example:                                                        /*
         Little control
         Unnecessar overhead code
 
-<!-- ------------------------------------------------------------------------------------------ --> 
 
+<Link>
 Useful Links:
 CSS Transforms:
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
@@ -276,3 +275,4 @@ BEM in Detail: http://getbem.com/introduction/
 An introduction to Bootstrap 4: https://academind.com/learn/css/bootstrap-4-tutorial/
 
 CSS Polyfills: https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
+<Link>

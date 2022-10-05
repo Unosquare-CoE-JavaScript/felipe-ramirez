@@ -1,10 +1,10 @@
-Rendering List and Conditional Content
+<!------------------------------------------------------------------------------------------------------------------------------>Rendering List and Conditional Content
 
 Content:
 - Outputting Dynamic List of content
 - Rendering content under certain conditions
 
-- Rendering List of data
+✅ ———————————————— Rendering List of data ————————————————
     const DATA = [
         {title: 'id: 01, Car Insurance 1', amount: 294, date: new Date(2021,2,28)},
         {title: 'id: 02, Car Insurance 2', amount: 333, date: new Date(2021,2,28)},
@@ -33,7 +33,7 @@ function App() {
     }
 
 
-- Rendering conditional content
+✅ ———————————————— Rendering conditional content ————————————————
 
 let expensesContent = <p>No Expenses Found</p>
 

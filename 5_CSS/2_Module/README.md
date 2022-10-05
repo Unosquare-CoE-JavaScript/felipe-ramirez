@@ -1,9 +1,10 @@
-Content:
-- Box Model
-- Height and width
-- The display property
-- Properties worth to remember
-- Pseudo clasess and elements
+<!------------------------------------------------------------------------------------------------------------------------------> Combinators, pseudoclasses
+Tags:
+Box Model
+Height and width
+The display property
+Properties worth to remember
+Pseudo clasess and elements
 
 - Box model
 ----------------------- margin
@@ -23,7 +24,7 @@ There are tree cases where margin collapsing is important
 3. An empty element with margins
 
 
-- Shorthand properties:
+✅ ————————————————  Shorthand properties ————————————————:
 Simply properties that combine a value of multiple properties in a single one
 ex:
     border-width: 2px;
@@ -34,11 +35,11 @@ ex:
     border: 2px dashed orange;      /*Width style color*/
 
 
-- Height and width:
+✅ ————————————————  Height and width ————————————————:
 block elements always will be 100% width of the container
 Height of 100% means the whole PARENT not the page 
 
-Box Sizing:
+✅ ————————————————  Box Sizing ————————————————:
 When we change width and height, we change the content
 
 #product-overview {
@@ -59,7 +60,7 @@ or using a classs which is better
 }
 
 
-- Pseudo Classes & Pseudo Elements
+✅ ————————————————  Pseudo Classes & Pseudo Elements ————————————————
 
 Classes: Defines style of a special state of an element     :class name example :hover
 Element: Defines style of a specific part of an element     : : element name example     ::after
@@ -87,7 +88,7 @@ More CSS Selectors:
 <a href="#" class="active"></a> /* a.active { ... }*/
 
 
-Useful links:
+<Link>
 Box model
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
 
@@ -111,3 +112,4 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
 
 Stacking context:
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+</Link>

@@ -1,16 +1,15 @@
-Current Rendering Adventures in React 18
-
+<!------------------------------------------------------------------------------------------------------------------------------> Current Rendering Adventures in React 18
+<Link>
 http://www.theproblemsolver.nl/concurrent-rendering-adventures-in-react-18.pdf
 
 https://github.com/mauricedb/concurrent-rendering-adventures-in-react-18
+</Link>
 
-
-Content:
+Tags:
 - <Suspense/>
 - Learn about useing Concurrent mode
 
--------------------------------------------------------------------------
-Suspense
+✅ ———————————————— Suspense ————————————————
 React 17- Allows react to suspend rendering a component subtree
 
 SWR and suspense -> SWR is used in the application to load data
@@ -24,7 +23,7 @@ SWR and suspense -> SWR is used in the application to load data
 </Suspense>
 <Suspense></Suspense>
 
-- React 18!!!!
+✅ ————————————————  React 18!!!! ————————————————
  npm install react@next react-dom@next --force
 
  New hooks

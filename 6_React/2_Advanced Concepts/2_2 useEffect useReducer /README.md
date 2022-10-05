@@ -1,12 +1,12 @@
-Content:
+<!------------------------------------------------------------------------------------------------------------------------------>UseEffect and UseReducer
+Tags:
 
 - Working with Side Effects
 - Managing more Complex State with Reducers
 - Managing App-wide or component-wide State With Context
 
-------------------------------------------------------------------------------------
 
-- Effect or Side Effect
+✅ ———————————————— Effect or Side Effect ————————————————
 Anything Else that might happen in our app that is not strictly related to React
 Store Data in browser Storage
 Send Http request to Backend Servers
@@ -89,7 +89,7 @@ myTimer is NOT added as a dependency because it's not a component-internal varia
 setTimeout is NOT added as a dependency because it's a built-in API (built-into the browser) - it's independent from React and your components, it doesn't change
 
 
-- Clean up Function
+✅ ———————————————— Clean up Function ————————————————
 
 useEffect (() => {
     const identifier = setTimeout(() => {
@@ -102,7 +102,7 @@ useEffect (() => {
     }
 }, [enteredEmail,enteredPassword])
 
-<!---------------------------------------------------------------------------------------------------------------useReducer-->
+✅ ———————————————— UseReducer ————————————————
 
 useReducer();
 
@@ -138,7 +138,7 @@ const emailChangeHandler = event => {
     dispatchEmail({type: 'USER_INPUT', val: event.target.value})
 }
 
-- useReducer and useEffect:
+✅ ———————————————— useReducer and useEffect ————————————————
 
 const { isValid: emailIsValid } = emailState;   /* It renames the property*/
 const { isValid: passwordIsValid } = passwordState;

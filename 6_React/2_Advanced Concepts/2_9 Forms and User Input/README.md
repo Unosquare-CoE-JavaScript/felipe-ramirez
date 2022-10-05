@@ -1,13 +1,13 @@
-Handling Forms and User Input
+<!------------------------------------------------------------------------------------------------------------------------------> Handling Forms and User Input
 
-Content:
+Tags:
 
 - Working with values, validation and state
 -  What's complex about forms
 -  Handling Input and Forms with React
 - Simplifications
 
-When To validate Forms
+✅ ———————————————— When To validate Forms ————————————————
 
 1. When form is submitted:
 Allows the user to enter a valide value before warning them
@@ -21,4 +21,6 @@ Very useful for untoched forms
 warns user before they had a chance of entering valid values
 If applied only an invalid input has the potential of providing more direct feeback
 
+<Link>
 https://formik.org/docs/overview
+</Link>

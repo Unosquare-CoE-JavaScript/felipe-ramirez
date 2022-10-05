@@ -1,6 +1,20 @@
-					_____________________________SCOPES AND CLOSURES_____________________________
+<!------------------------------------------------------------------------------------------------------------------------------>SCOPES AND CLOSURES
+Tags:
+Compiled language
+Errors
+Shadowing
+Hoisting
+Node Modules
+Temporal Dead Zone
+Least exposure
+IIFE
+Var and Let
+Deeper closure
+Encapsulation
+Node CommonJS Modules
+Modern ES Modules (ESM)
 
-______________________________________________________________________________________________Chapter 1: What is the Scope
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter 1: What is the Scope
 
 JS functions are themselves first-class values, they can be assigned ad passed around just like numbers or strings
 
@@ -35,17 +49,20 @@ Notes:
 Scope is determined as the program is compiled and should not generally be affected by runtime conditions.
 However in non-strict mode, there are technically still two ways to cheat this rule modifying program’s scope during runtime
 
-______________________________________________________________________________________________Chapter 2 Illustrating lexical Scope:
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter 2 Illustrating lexical Scope:
 
-Concepts:
+✅ ————————————————Concepts————————————————:
 Engine: Responsible for start-to-finish compilation and execution
 Compiler: handles parsing and code-generation
 Scope Manager: collects and mantains a lookup list of all declared variables/identifiers and enforces a set of rules to access them 
 
 
-______________________________________________________________________________________________Chapter 3 The scope chain:
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter 3 The scope chain:
 
-Shadowing:
+✅ ————————————————Shadowing ————————————————:
+<Link>
+https://www.geeksforgeeks.org/variable-shadowing-in-javascript/
+</Link>
 Example:
 
 Var studentName = “Susy”;
@@ -61,9 +78,9 @@ printStudent(studentName) //SUZY
 
 console.log(studentName) // Suzy
 
-______________________________________________________________________________________________Chapter 4 Around the Global Scope:
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter 4 Around the Global Scope:
 
-—————————————————————How do all separate JS files get stitched together in a single runtime context by engine ?????
+✅ ———————————————— How do all separate JS files get stitched together in a single runtime context by engine ?????
 
 First, if using ES modules these files are loaded individually by the JS environment. Each module then import references to whichever other modules it needs to access.
 The separate module files cooperate with each other exclusively through these shared imports without needing any shared outer scope.
@@ -96,22 +113,22 @@ Third, whether a bundler tool is used for an application or whether the non-ES m
 Encompassing all these pieces, the global scope is the only way for them to cooperate with each other
 
 The example here is the same as the second case, but without the wrappingOuterScope function
-The global Scope is also where:}
+The global Scope is also where:
 
 JS exposes its built-ins:
--Primitives: undefined, null, Infinity, NaN,
--natives: Date(), Object(), String(), etc,
--Global Functions: eval(), parseInt(),
+- Primitives: undefined, null, Infinity, NaN,
+- natives: Date(), Object(), String(), etc,
+- Global Functions: eval(), parseInt(),
 - namespaces: Math, atomics, JSON,
--Friends of JS: Intl, WebAssembly
+- Friends of JS: Intl, WebAssembly
 
 The environment hosting the Js engine exposes its own built-ins:
--console
--DOM
--timers (setTimeout, etc)
--web platform APIs: navigator, history, geolocation, etc
+- console
+- DOM
+- timers (setTimeout, etc)
+- web platform APIs: navigator, history, geolocation, etc
 
-————————————————————— ES Modules (ESM)
+✅ ———————————————— ES Modules (ESM)-————————————————
 
 Var studentName = “Kyle”;
 
@@ -125,7 +142,7 @@ Export hello;
 
 studentName and hello are “module-global”
 
-—————————————————————  Node:
+✅ ————————————————  Node ————————————————
 
 The top level of Node programs is never actually the global Scope, the way it is when loading a non-module file in the browser
 
@@ -146,14 +163,17 @@ To call the global context in Node, you’ve got to use:
 
 global.studentName = “Kyle”;
 
-______________________________________________________________________________________________Chapter 5 The Secret lifecycle of variables:
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter 5 The Secret lifecycle of variables:
 
 When you declare functions or var you can use them over all the scope, even before declare it (it has some exceptions)
 
-————————————————————— Hoisting:
+✅ ———————————————— Hoisting ————————————————:
+<Link>
+https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+</Link>
 Is a mechanism for re-ordering code  or sth like that
 The JS engine doesn’t actually re-arrange the code, it can’t magically look ahead and find declarations; the only way to accurately find them as well as all the scope boundaries 
-In the program, would be to full parse the code (Passing is the first phase of the two-phase processing. 
+In the program, would be to full parse the code (Passing is the first phase of the two-phase processing). 
 
 When you use var, you can redeclare a variable, but using let will throw an error (This is for the updates of JS)
 Using const is not possible, redeclare nor reassign a variable
@@ -162,8 +182,11 @@ Syntax Error: Represent faults in the program that stop it from even starting ex
 Type Error: represent faults that arise during program execution.
 
 
-——————————————————— Temporal Dead Zone
-Is te time window where a variable exists but is still uninitialized, and therefore cannot be accessed in any way.
+✅ ———————————————— Temporal Dead Zone ————————————————
+<Link>
+https://www.geeksforgeeks.org/what-is-the-temporal-dead-zone-in-es6/
+</Link>
+Is the time window where a variable exists but is still uninitialized, and therefore cannot be accessed in any way.
 example:
 
 askQuestion (); // Reference error 
@@ -180,15 +203,15 @@ While studentName is still in its TDZ
 TDZ errors occur because let/const declarations do hoist their declarations to the top of their scopes, but unlike var, they defer the auto-initialization of their variables until the moment
 In the code’s sequencing where the original declaration appeared.
 
-______________________________________________________________________________________________Chapter 6 Limiting Scope Exposure
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter 6 Limiting Scope Exposure
 
-Least exposure:
+✅ ————————————————Least exposure ————————————————:
 Means that the least exposure has a variable, the better it is to prevent:
 -Naming Collisions
 -Unexpected behavior
 -Unintented dependency
 
-———————————————————— Hiding in plain (Function) Scope:
+✅ ———————————————— Hiding in plain (Function) Scope  ————————————————:
 
 Example:
 
@@ -227,10 +250,13 @@ Var factorial = (function hideTheCache () {
 	
 }) ()
 
-———————————————————— Invoking Functions Expressions Immediately
+✅ ———————————————— Invoking Functions Expressions Immediately  ————————————————
+<Link>
+https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/
+</Link>
 
 The second () in the last lines, is calling the function expression we defined.
-We are defining a functions expression that’s then immediately invoked. They are the immediately invoked functions Expressions (IIFE) :D
+We are defining a functions expression that’s then immediately invoked. They are the immediately invoked functions Expressions (IIFE)
 
 Is useful when we want to create a scope to hide variables/Functions (it can be named or anonymous)
 
@@ -241,17 +267,20 @@ Here’s an example:
 })() ;
 //more outer scope
 
-———————————————————— Scoping with Blocks
+✅ ———————————————— Scoping with Blocks ————————————————
 Let declarations with nested blocks
 You can use { } to define scope (Sometimes)
 
-————————————————————var and Let:
+✅ ————————————————var and Let ————————————————:
+<Link>
+https://www.programiz.com/javascript/let-vs-var
+</Link>
 Var signaled “variable that belongs to a whole function”, no matter where appears
 Var should be reserved for use in the top-level scope of a function
 
 Var better communicates function-scoped than let does and let both communicates block-scoping where var is inssufficient.
 
-———————————————————— Function Declarations in Blocks FiB
+✅ ————————————————Function Declarations in Blocks FiB ————————————————
 
 Example:
 If (false) {
@@ -267,7 +296,7 @@ So, it is better to avoid place a function declaration directly inside any block
 
 
 
-______________________________________________________________________________________________Chapter 7: Using Closures
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter 7: Using Closures
 
 Function lookupStudent (studentID) {
 	var students = [
@@ -288,6 +317,8 @@ Var chosenStudents = [
 
 chosenStudents[0].name; // greetStudent
 chosenStudents[0](“Hello”) // Hello Felipe
+
+✅ ———————————————— Closure ————————————————:
 
 Closure Allows greetStudent() to continue to access those outer variables even after the outer scope is finished (When each call to lookupStudent() completes)
 Instead of the instances of students and studentID being GC’d (Garbage Collector) they stay around in memory.
@@ -324,7 +355,7 @@ hits() // 2
 hits() // 3
 
 
-———————————————————— Common Closures: Ajax and Events:
+✅ ———————————————— Common Closures: Ajax and Events  ————————————————:
 
 Function lookupStudentRecord (studentID) {
 	ajax(
@@ -353,12 +384,12 @@ Closure is observed when a function uses variables from outer scope(s) even whil
 - Must be invoked in a different branch of the scope chain of variable(s)
 
 
-______________________________________________________________________________________________Chapter  8: The module Pattern
+<!------------------------------------------------------------------------------------------------------------------------------>Chapter  8: The module Pattern
 
-———————————————————— Encapsulation and Least Exposure:
+✅ ———————————————— Encapsulation and Least Exposure ————————————————:
 
 Modules: 
-A module is a collections of related data and functions (often referred to as methods in this context), characterized by a division between hidden private details and public accssible
+A module is a collection of related data and functions (often referred to as methods in this context), characterized by a division between hidden private details and public accssible
 Details usually called the public API.
 
 What is NOT a module:
@@ -400,7 +431,7 @@ Student.function1();
 
 Student is now an instance of a module. It features a public API with a single method: function1 () this method to access the private hidden data.
 
-———————————————————— Module Factory (Multiple Instances):
+✅ ———————————————— Module Factory (Multiple Instances) ————————————————:
 Just changing the last lines of the last example as follows:
 
 Var variableToSavefunction = defineStudent();
@@ -415,7 +446,10 @@ So to clarify what makes something a classic module:
 - The module must return on its public API a reference to at least one function that has closure over the hidden module state
 
 
-———————————————————— Node CommonJS Modules:
+✅ ———————————————— Node CommonJS Modules ————————————————:
+<Link>
+https://nodejs.org/api/modules.html
+</Link>
 CommonJs modules are file-based (one module per file)
 
 module.exports.function1 = function1
@@ -429,7 +463,7 @@ Function function1 () {
 Don’t do this:
 
 Module.exports = {
-	function1, function2 (As I did it in last project
+	function1, function2 (As I did it in last project)
 }
 
 Do this way:
@@ -440,8 +474,8 @@ Object.assign(module.exports, {
 
 To include another module instance into your module/program, use Node’s require() method.
 
-———————————————————— Modern ES Modules (ESM):
-One big difference with commonJs Modules is ESm files are assumed to be strict-mode without needing a “use-strict” pragma at the top.
+✅ ———————————————— Modern ES Modules (ESM)  ————————————————:
+One big difference with commonJs Modules is ESM files are assumed to be strict-mode without needing a “use-strict” pragma at the top.
 
 Instead of module.exports ESM uses  export  And import, example:
 
@@ -481,11 +515,11 @@ Import * as WhicheverName from “././filepath.js”
 
 
 
-______________________________________________________________________________________________Appendix A: Exploring further:
+<!------------------------------------------------------------------------------------------------------------------------------>Appendix A: Exploring further:
 
-———————————————————— Implied Scopes:
+✅ ———————————————— Implied Scopes  ————————————————:
 Parameter Scope:
-- Never shadow parameters with local variables - Avoid using a default parameter function that closes  over any of the parameters 
+- Never shadow parameters with local variables- Avoid using a default parameter function that closes  over any of the parameters 
 Function Name Scopes:
 Var askQuestion = function oftheTheacher () {
 	let oftheTeacher = “Confusing!!!”
@@ -509,16 +543,19 @@ Anonymous function expressions passed as callbacks are incapable of receiving an
 
 The advise is to always name functions!!!
 
-———————————————————— Arrow Functions:
+✅ ———————————————— Arrow Functions  ————————————————:
+<Link>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+</Link>
 They are always anonymous
 They don’t define this keyword at all
 
-———————————————————— IIFE variations:
+✅ ———————————————— IIFE variations  ————————————————:
 (Function putANameHere() {
 }) (); 
 You can use !, +, or other unary operators instead of () to define IIFE or just the word void.
 
-———————————————————— Hoisting: Functions and Variables:
+✅ ———————————————— Hoisting: Functions and Variables  ————————————————:
 Function hoisting (lifting) makes code more readable through a flowing progressive reading order, from top to bottom (calling a function before it is defined)
 Variable hoisting is a bad idea :(
 
@@ -536,7 +573,7 @@ Are Synchronous Callbacks still Closures?
 Closure is a function instance remembering it outer variables even as that function is passed around and invoked in other scopes
 Closure is a function instance and its scope environment being preserved in-place while any references to it are passed around and invoked from other scopes. 
 
-———————————————————— Classic Module Variations:
+✅ ———————————————— Classic Module Variations  ————————————————:
 Var studentList = (function defineModule(Student) {
 	var elms =[];
 
@@ -558,7 +595,7 @@ define([“./Student”], function StudentList (Student) {
 	}
 })
 
-Universal Modules (UMD):
+✅ ———————————————— Universal Modules (UMD)  ————————————————:
 
 (Function UMD(name, context, definition) {
 	if (typeof define === “function” && define.amd) {

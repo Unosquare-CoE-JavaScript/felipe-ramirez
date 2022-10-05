@@ -1,11 +1,11 @@
-React Testing Library
+<!------------------------------------------------------------------------------------------------------------------------------>React Testing Library
 
 - Not just a library, also a philosophy
     - Test your software the way users actually use it
         - Not internal implementation
     - Find elements by accessibility markers, not testsIDs
 
-React Testing Lib Vs JEST
+✅ ———————————————— React Testing Lib Vs JEST ————————————————
 
 React Testing Library
     Provides Virtual DOM for tests
@@ -16,7 +16,7 @@ JEST
         Run test
         Determines wheter test pass or fail
     
-- Getting Started
+✅ ———————————————— Getting Started ————————————————
 npx create-react-app some-name
 
 npm test
@@ -48,7 +48,7 @@ expect()
 asertion, causes test or fail
 
 
-- JEST and JEST-DOM Assertions
+✅ ———————————————— JEST and JEST-DOM Assertions ————————————————
 
 Assertions:
 expect(linkElement).toBeIntheDocument()
@@ -78,7 +78,7 @@ DOM-based matchers
 examples:
     toBeVisible() or toBeChecked
 
-- JEST:
+✅ ———————————————— JEST: ————————————————
 
 React Testing Library helps with:
     rendeing components into virtual DOM
@@ -89,11 +89,11 @@ Nees a test runner
 JEST is recommended by testing library and it comes by default
 
 
-- JEST watch Mode
+✅ ————————————————JEST watch Mode ————————————————
 Watch for changes in files since the last commit 
 Only run tests related to these files
 
-- How does JEST work
+✅ ———————————————— How does JEST work ————————————————
 global test method has two arguments
     * string description
     * test function
@@ -101,7 +101,7 @@ test Fail if error is throun when running function
     assertions throw errors when expectations fails
 
 
-- TDD: Test Driven Development
+✅ ———————————————— TDD: Test Driven Development ————————————————
 Write your test before writting code
     then write code according to spec set by tests
 It is called red-green texting
@@ -120,40 +120,44 @@ Why to do that?
     It's more efficient
 
 
-- React Testing Library:
+✅ ———————————————— React Testing Library: ————————————————
 
     Create virtual dom for testing and provide utilities for interacting with DOM
 
-- Type of tests:
-    Unit Tests
+✅ ———————————————— Type of tests: ————————————————
+    * Unit Tests
         Test one unit of code in isolation
-    Integration Tests
+    * Integration Tests
         How multiple units work together
-    Functional Tests
+    * Functional Tests
         Tests a particular function of software
 
-- Functional Testing vs Unit Testing
+✅ ———————————————— Functional Testing vs Unit Testing ————————————————
     Different mindset from unit testing
 
-    Unit testing
+    * Unit testing
         Isolated: mock dependencies, test internals
         Very easy to pinpoint failures
         Further from how users interact with software
         More likely to break with refactoring
 
-    Functional Testing:
+    * Functional Testing:
         Include all relevant units, test behavior
         Close to how users interact with software
         Robust test
         More difficult to debug failing tests
 
-- Testing library and Accessibility:
+✅ ———————————————— Testing library and Accessibility: ————————————————
 Testing library recommends findind elements by accessibility handles
 this is the guide
+    <Link>
     https://testing-library.com/docs/queries/about/#priority
+    </Link>
 
-Roles Documentation:
+✅ ————————————————Roles Documentation: ————————————————
+    <Link>
     https://www.w3.org/TR/wai-aria/#role_definitions
+    </Link>
 
 
 

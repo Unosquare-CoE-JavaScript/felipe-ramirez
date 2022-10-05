@@ -1,5 +1,5 @@
-General Course Plan:
-
+<!------------------------------------------------------------------------------------------------------------------------------>General Course Plan:
+Tags:
 - React 
 - First App
 - Introduce testing interactions that affect the DOM, unit testing functions
@@ -9,9 +9,9 @@ General Course Plan:
 - mocking server responses with Mock server
 - Testing async function
 
-<!---------------------------------------------------------------------------------------->
-- General React
+<!------------------------------------------------------------------------------------------------------------------------------> General React
 
+✅ ———————————————— Basic Concepts ————————————————
 import {fireEvent}
 
 test('button has correct initial color', ()=> {
@@ -34,8 +34,11 @@ test('button turns blue when clicked', () => {
     expect(colorbutton.textContent).toBe('Change to red')
 })
 
-- Add checkbox
+✅ ———————————————— Add checkbox ————————————————
+
+<Link>
 https://github.com/testing-library/jest-dom
+</Link>
 
 test('initial conditions', () => {
     render(<App />)
@@ -49,7 +52,7 @@ test('initial conditions', () => {
     expect(checkbox).not.toBeChecked()
 })
 
-<!----------------------------code Quiz-->
+✅ ———————————————— Code Quiz  ————————————————
 - When checkbox is checked button should be disabled
 
 test('Checkbox disables button on first click and enables on second click', () => {
@@ -64,7 +67,7 @@ test('Checkbox disables button on first click and enables on second click', () =
     expect(button).toBeEnabled();
 })
 
-- Checkbox with label
+✅ ———————————————— Checkbox with label ————————————————
 
 test('Checkbox disables button on first click and enables on second click', () => {
     render(<App/>);
@@ -75,9 +78,7 @@ test('Checkbox disables button on first click and enables on second click', () =
     expect(button).toBeDisabled();
 })
 
-----------------------------------------------------------------------------------------------
-
-- Unit Testing Functions
+✅ ———————————————— Unit Testing Functions ————————————————
 
 Functions separate from components
     Used by several components
@@ -102,7 +103,7 @@ describe('spaces before came-case capital letters', () => {
     })
 })
 
-- When to Unit test
+✅ ———————————————— When to Unit test ————————————————
 
     Could be covered by functional test on button
     For more complicated functions unit test help with:

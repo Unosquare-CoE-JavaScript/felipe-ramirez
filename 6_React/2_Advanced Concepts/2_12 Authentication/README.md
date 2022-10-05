@@ -1,12 +1,12 @@
-Authentication to React Apps
+<!------------------------------------------------------------------------------------------------------------------------------> Authentication to React Apps
 
-Content
+Tags
 - How Auth works in React Apps
 - Implementing User Authentication
 - Adding auth Persistence and Auto-logout
 
 
-Getting Permission
+✅ ———————————————— Getting Permission ————————————————
 Server-side Sessions
     - Store unique identifier on server, send same identifier to client
     - Client sends identifier along with request to protected resources
@@ -21,11 +21,11 @@ As explained in the previous lecture, those "tokens" are really just long string
 You can learn more about JSON Web Tokens (JWTs) here: https://jwt.io/
 
 
-- Example Project
+✅ ———————————————— Example Project  ————————————————
 Auth using Firebase
 Firebase auth rest api
 
-- 
+
 An option to manage session in React is using React Context
 
 To Protect Frontend Pages, use Navigation Guards
@@ -55,9 +55,10 @@ function App() {
     )
 }
 
-- Persisting the user Authentication Status
+✅ ———————————————— Persisting the user Authentication Status  ————————————————
+<Link>
 https://academind.com/tutorials/localstorage-vs-cookies-xss
-
+</Link>
 
 
 

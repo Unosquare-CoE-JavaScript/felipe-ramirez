@@ -1,4 +1,15 @@
- _______________________________________________Pure Functions:__________________
+ <!------------------------------------------------------------------------------------------------------------------------------>Functional Programming
+ Tags:
+ Pure Functions
+ Currying Functions
+ Composition
+ Identify Functor
+ Monad Functor
+
+✅ ———————————————— Pure Functions————————————————
+<Link>
+https://www.geeksforgeeks.org/pure-functions-in-javascript/
+</Link>
 -Deterministic: Always the same output for the same input
 -No Side Effects
 
@@ -9,7 +20,10 @@ Testable
 Composable
  
 
- _______________________________________________Currying Functions:_______________
+✅ ———————————————— Currying Functions————————————————
+<Link>
+https://javascript.info/currying-partials
+</Link>
 
  const curry = f => x => y => f(x,y)
  const modulo = curry((x,y) => y % x)
@@ -31,7 +45,10 @@ Composable
 const replaceVowels = replace(/[AEIOU/ig, '!');
 const result = replaceVowels('Hey I have words')
 
-_______________________________________________Composition_________________________
+✅ ———————————————— Composition————————————————
+<Link>
+https://www.educative.io/answers/function-composition-in-javascript
+</Link>
 
 const toUpper = str => str.toUpperCase();
 const exclaim = str => str + '!';
@@ -55,7 +72,10 @@ const images = _.compose(_.map(imageTag), src)
 const widget = _.compose(_.map(images), getJSON, url)
 
 
-_______________________________________________Identity Functor_________________________
+✅ ———————————————— Identity Functor————————————————
+<Link>
+https://javascript.plainenglish.io/the-definite-guide-to-functors-in-js-6f5e82bd1dac
+</Link>
 
 const Box = x => 
 ({
@@ -70,7 +90,7 @@ const halfTheFirstLargeNumber = xs =>
     .map(found => first(found) /2)
     .fold(answer => 'The answer is ' + answer)
 
-_______________________________________________Monad Functor_________________________  
+✅ ———————————————— Monad Functor————————————————  
 
 const findColor = name => 
     ({red: '#ff4444', blue: '#3b5998', yellow: '#fff68f'}[name])
@@ -83,7 +103,7 @@ To deal with undefined issues:
 See ExampleMonad.js
 
 
-_______________________________________________Additional Info:_________________________  
+✅ ———————————————— Additional Info———————————————— 
 
 Not from the course, but video Intro to Functional Programming Youtube (Channel Fazt)
 
